@@ -13,7 +13,7 @@ import org.springframework.web.servlet.mvc.Controller;
 public class IndexController implements Controller {
 	@RequestMapping(method=RequestMethod.GET)
 	public ModelAndView handleRequest(HttpServletRequest request,HttpServletResponse response) throws Exception {
-		ModelAndView modelAndView = new ModelAndView("/showMessage");
+		ModelAndView modelAndView = new ModelAndView("showMessage");
 		modelAndView.addObject("message","salut le monde youhou");
 		return modelAndView;
 	}
