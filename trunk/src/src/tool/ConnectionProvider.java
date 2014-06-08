@@ -18,7 +18,7 @@ import org.apache.tomcat.jdbc.pool.PoolProperties;
  *
  */
 public class ConnectionProvider {
-	private PoolProperties poolProperties;
+	private static PoolProperties poolProperties;
 	private static DataSource dataSource;
 	private static Log LOGGER = LogFactory.getLog(ConnectionProvider.class);
 	private static String host;
@@ -26,7 +26,13 @@ public class ConnectionProvider {
 	private static String userName;
 	private static String password;
 	
-	public ConnectionProvider(){
+	public static void initialise(){
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		poolProperties = new PoolProperties();
 		poolProperties.setUrl("jdbc:mysql://"+host+"/"+db);
 		poolProperties.setDriverClassName("com.mysql.jdbc.Driver");
@@ -42,7 +48,7 @@ public class ConnectionProvider {
 	 */
 	public static Connection getConnection(){
 		try {
-			return dataSource.getConnection();
+			return ConnectionProvider.dataSource.getConnection();
 		} catch (SQLException e) {
 			LOGGER.error("Impossible d'obtenir une connexion",e);
 			return null;			

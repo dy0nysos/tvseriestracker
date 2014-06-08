@@ -51,6 +51,7 @@ public class ChargementApplicationListener implements ServletContextListener {
 			ConnectionProvider.setDb(db);
 			ConnectionProvider.setUserName(username);
 			ConnectionProvider.setPassword(password);
+			ConnectionProvider.initialise();
 			ConnectionProvider.getConnection();
 		}
 		LOGGER.info("Pool démarré");
