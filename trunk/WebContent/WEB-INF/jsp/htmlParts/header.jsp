@@ -32,10 +32,10 @@
 		</nav>
 		<div class="jumbotron">
 			<div class="container">
-				<h1>Hello, world!</h1>
+				<h1>A l'affiche</h1>
 				<p>Contents ...</p>
 				<p>
-					<a class="btn btn-primary btn-lg">Learn more</a>
+					<a class="btn btn-primary btn-lg">+ d'infos</a>
 				</p>
 			</div>
 		</div>
