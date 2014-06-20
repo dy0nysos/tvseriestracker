@@ -32,7 +32,7 @@ public class ChargementApplicationListener implements ServletContextListener {
 		initProperties();
 		BeanProvider.applicationContext = WebApplicationContextUtils.getWebApplicationContext(sce.getServletContext());
 		try{
-			BeanProvider.getBean("monBean");
+			BeanProvider.getBean("connexionService");
 		}catch(Exception e){
 			LOGGER.error(e);
 		}

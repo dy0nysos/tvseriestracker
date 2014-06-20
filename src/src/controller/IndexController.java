@@ -1,5 +1,6 @@
 package src.controller;
 
+import javax.jws.WebParam;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -21,4 +22,11 @@ public class IndexController implements Controller {
 		modelAndView.addObject("message","salut le monde youhou");
 		return modelAndView;
 	}
+//	@RequestMapping(value="/index/{idUser}",method=RequestMethod.GET)
+//	public ModelAndView userLookup(HttpServletRequest req,HttpServletResponse res,@PathVariable String idUser){
+//		ModelAndView modelAndView = new ModelAndView("index");
+//		modelAndView.addObject("message",idUser);
+//		return modelAndView;
+//	}
+
 }
