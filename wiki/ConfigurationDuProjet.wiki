@@ -1,13 +1,13 @@
-#summary One-sentence summary of this page.
+#summary TV Series Tracker.
 
-= Introduction =
+= Présentation du projet =
 
-Add your content here.
+But: Créer un tracker de séries, permettant de pointer les épisodes vus, et d'être averti des prochaines sorties
 
 
-= Details =
+= Mise en place du projet =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+*Récupérer les sources via un checkout SVN
+*Importer le projet dans Eclipse sous la forme d'un Dynamic Web Project (Eclipse Java EE edition obligatoire)
+*Télécharger Tomcat v7.
+*Ajouter le mysqlconnector dans les lib de tomcat (tomcat/lib/)
